@@ -1,0 +1,31 @@
+$color-primary-main: #0071E3;
+$color-secondary-main: #202731;
+
+$color-success-main: #12ae30;
+$color-info-main: #0071E3;
+$color-warning-main: #F44336;
+
+$color-background-default: #0D1117;
+$color-background-paper: #161B22;
+
+$color-text-primary: #E6EDF3;
+$color-text-secondary: #0D1117;
+$color-text-disabled: #EBEBE4;
+
+$color-common-white: #FBFBFD;
+$color-common-black: #0D1117;
+ 
+:export {
+  colorPrimaryMain: $color-primary-main;
+  colorSecondaryMain: $color-secondary-main;
+  colorSuccessMain: $color-success-main;
+  colorInfoMain: $color-info-main;
+  colorWarningMain: $color-warning-main;
+  colorBackgroundDefault: $color-background-default;
+  colorBackgroundPaper: $color-background-paper;
+  colorTextPrimary: $color-text-primary;
+  colorTextSecondary: $color-text-secondary;
+  colorTextDisabled: $color-text-disabled;
+  colorCommonWhite: $color-common-white;
+  colorCommonBlack: $color-common-black;
+}

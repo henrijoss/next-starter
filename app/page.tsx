@@ -1,21 +1,94 @@
-import { Typography } from "@mui/material";
+"use client";
+
+import {
+  Box,
+  Button,
+  Stack,
+  styled,
+  Typography,
+  TypographyVariant,
+} from "@mui/material";
+
+import { typography } from "@/style/theme/typography";
+
+const StyledBox = styled(Box)(({ theme }) =>
+  theme.unstable_sx({
+    gap: "8px",
+    display: "grid",
+    gridTemplateColumns: "repeat(5, minmax(0, 140px))",
+  }),
+);
 
 export default function Home() {
   return (
     <main>
-      <Typography variant="h1">Typography h1</Typography>
-      <Typography variant="h2">Typography h2</Typography>
-      <Typography variant="h3">Typography h3</Typography>
-      <Typography variant="h4">Typography h4</Typography>
-      <Typography variant="h5">Typography h5</Typography>
-      <Typography variant="h6">Typography h6</Typography>
-      <Typography variant="body1">Typography body1</Typography>
-      <Typography variant="body2">Typography body2</Typography>
-      <Typography variant="subtitle1">Typography subtitle1</Typography>
-      <Typography variant="subtitle2">Typography subtitle2</Typography>
-      <Typography variant="caption">Typography caption</Typography>
-      <Typography variant="button">Typography button</Typography>
-      <Typography variant="overline">Typography overline</Typography>
+      <Stack gap={2}>
+        <Stack gap={2}>
+          {Object.keys(typography).map((typo) => (
+            <Typography key={typo} variant={typo as TypographyVariant}>
+              Typography {typo}
+            </Typography>
+          ))}
+        </Stack>
+        <StyledBox>
+          <Button color="primary">Primary</Button>
+          <Button color="secondary">Secondary</Button>
+          <Button color="info">Info</Button>
+          <Button color="success">Success</Button>
+          <Button color="warning">Warning</Button>
+        </StyledBox>
+        <StyledBox>
+          <Button variant="contained" color="primary">
+            Primary
+          </Button>
+          <Button variant="contained" color="secondary">
+            Secondary
+          </Button>
+          <Button variant="contained" color="info">
+            Info
+          </Button>
+          <Button variant="contained" color="success">
+            Success
+          </Button>
+          <Button variant="contained" color="warning">
+            Warning
+          </Button>
+        </StyledBox>
+        <StyledBox>
+          <Button variant="outlined" color="primary">
+            Primary
+          </Button>
+          <Button variant="outlined" color="secondary">
+            Secondary
+          </Button>
+          <Button variant="outlined" color="info">
+            Info
+          </Button>
+          <Button variant="outlined" color="success">
+            Success
+          </Button>
+          <Button variant="outlined" color="warning">
+            Warning
+          </Button>
+        </StyledBox>
+        <StyledBox>
+          <Button size="small" variant="contained" color="primary">
+            Primary
+          </Button>
+          <Button size="small" variant="contained" color="secondary">
+            Secondary
+          </Button>
+          <Button size="small" variant="contained" color="info">
+            Info
+          </Button>
+          <Button size="small" variant="contained" color="success">
+            Success
+          </Button>
+          <Button size="small" variant="contained" color="warning">
+            Warning
+          </Button>
+        </StyledBox>
+      </Stack>
     </main>
   );
 }
