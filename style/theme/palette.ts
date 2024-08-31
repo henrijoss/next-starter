@@ -1,6 +1,17 @@
-import createPalette from "@mui/material/styles/createPalette";
+import createPalette, { SimplePaletteColorOptions } from '@mui/material/styles/createPalette';
 
-import paletteTokens from "@/style/styles/_palette.module.scss";
+import paletteTokens from '@/style/styles/_palette.module.scss';
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    calendar?: SimplePaletteColorOptions;
+    frosted: SimplePaletteColorOptions;
+  }
+  interface PaletteOptions {
+    calendar?: SimplePaletteColorOptions;
+    frosted: SimplePaletteColorOptions;
+  }
+}
 
 export const palette = createPalette({
   primary: {
@@ -15,17 +26,20 @@ export const palette = createPalette({
     // dark: "",
     // contrastText: "",
   },
-  //   error: {
-  // light: "",
-  // main: "",
-  // dark: "",
-  // contrastText: "",
-  //   },
-  warning: {
-    //   light: "",
-    main: paletteTokens.colorWarningMain,
-    //   dark: "",
-    //   contrastText: "",
+  error: {
+    // light: "",
+    main: paletteTokens.colorErrorMain,
+    // dark: "",
+    // contrastText: "",
+  },
+  //warning: {
+  //   light: "",
+  // main: paletteTokens.colorWarningMain,
+  //   dark: "",
+  //   contrastText: "",
+  //},
+  calendar: {
+    main: paletteTokens.colorCalendarMain,
   },
   info: {
     //   light: "",
@@ -65,5 +79,9 @@ export const palette = createPalette({
   background: {
     default: paletteTokens.colorBackgroundDefault,
     paper: paletteTokens.colorBackgroundPaper,
+  },
+  frosted: {
+    main: paletteTokens.colorFrostedMain,
+    light: paletteTokens.colorFrostedLight,
   },
 });

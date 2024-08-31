@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { alpha, createTheme } from "@mui/material";
+import { alpha, createTheme } from '@mui/material';
 
-import { palette } from "./palette";
-import { typography } from "./typography";
-import { variables, Variables } from "./variables";
+import { palette } from './palette';
+import { typography } from './typography';
+import { variables, Variables } from './variables';
 
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
   interface Theme {
     variables: Variables;
   }
@@ -27,8 +27,8 @@ export const theme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          paddingTop: "2rem",
-          paddingBottom: "2rem",
+          paddingTop: '2rem',
+          paddingBottom: '2rem',
         },
       },
     },
@@ -40,55 +40,88 @@ export const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          fontSize: "1rem",
-          textTransform: "initial",
-          boxShadow: "none",
-          ":hover": {
-            boxShadow: "none",
+          fontSize: '1rem',
+          textTransform: 'initial',
+          boxShadow: 'none',
+          ':hover': {
+            boxShadow: 'none',
           },
         },
       },
       variants: [
         {
-          props: { variant: "text", color: "secondary" },
+          props: { variant: 'text', color: 'secondary' },
           style: {
             color: palette.text.primary,
           },
         },
         {
-          props: { variant: "outlined", color: "secondary" },
+          props: { variant: 'outlined', color: 'secondary' },
           style: {
             color: palette.text.primary,
             borderColor: palette.text.primary,
           },
         },
         {
-          props: { variant: "contained", color: "success" },
+          props: { variant: 'contained', color: 'success' },
           style: {
             color: palette.success.main,
             backgroundColor: palette.secondary.main,
-            ":hover": {
+            ':hover': {
               backgroundColor: alpha(palette.success.main, 0.1),
             },
           },
         },
         {
-          props: { variant: "contained", color: "info" },
+          props: { variant: 'contained', color: 'info' },
           style: {
             color: palette.info.main,
             backgroundColor: palette.secondary.main,
-            ":hover": {
+            ':hover': {
               backgroundColor: alpha(palette.info.main, 0.1),
             },
           },
         },
         {
-          props: { variant: "contained", color: "warning" },
+          props: { variant: 'contained', color: 'warning' },
           style: {
             color: palette.warning.main,
             backgroundColor: palette.secondary.main,
-            ":hover": {
+            ':hover': {
               backgroundColor: alpha(palette.warning.main, 0.1),
+            },
+          },
+        },
+        {
+          props: { variant: 'contained', color: 'error' },
+          style: {
+            color: palette.error.main,
+            backgroundColor: palette.secondary.main,
+            ':hover': {
+              backgroundColor: alpha(palette.error.main, 0.1),
+            },
+          },
+        },
+      ],
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+          ':hover': {
+            boxShadow: 'none',
+          },
+        },
+      },
+      variants: [
+        {
+          props: { color: 'secondary' },
+          style: {
+            color: palette.text.primary,
+            background: palette.frosted.main,
+            backdropFilter: 'blur(20px)',
+            '&:hover': {
+              background: palette.frosted.light,
             },
           },
         },

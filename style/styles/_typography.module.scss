@@ -1,3 +1,6 @@
+$typography-display1-size: 64px;
+$typography-display1-weight: 600;
+
 $typography-h1-size: 32px;
 $typography-h1-weight: 600;
 
@@ -20,6 +23,8 @@ $typography-subtitle1-size: 10px;
 $typography-subtitle1-weight: 500;
 
 :export {
+  typographyDisplay1Size: $typography-display1-size;
+  typographyDisplay1Weight: $typography-display1-weight;
   typographyH1Size: $typography-h1-size;
   typographyH1Weight: $typography-h1-weight;
   typographyH2Size: $typography-h2-size;

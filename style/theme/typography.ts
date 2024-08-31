@@ -1,9 +1,24 @@
-import { TypographyOptions } from "@mui/material/styles/createTypography";
+import { TypographyOptions } from '@mui/material/styles/createTypography';
 
-import typographyTokens from "@/style/styles/_typography.module.scss";
+import typographyTokens from '@/style/styles/_typography.module.scss';
+
+declare module '@mui/material/styles' {
+  interface TypographyVariants {
+    display1: React.CSSProperties;
+  }
+
+  // allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    display1?: React.CSSProperties;
+  }
+}
 
 export const typography: TypographyOptions = {
-  fontFamily: "inherit", // Defined in root layout
+  fontFamily: 'inherit', // Defined in root layout
+  display1: {
+    fontSize: typographyTokens.typographyDisplay1Size,
+    fontWeight: typographyTokens.typographyDisplay1Weight,
+  },
   h1: {
     fontSize: typographyTokens.typographyH1Size,
     fontWeight: typographyTokens.typographyH1Weight,

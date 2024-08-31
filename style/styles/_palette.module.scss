@@ -2,8 +2,9 @@ $color-primary-main: #0071E3;
 $color-secondary-main: #202731;
 
 $color-success-main: #12ae30;
-$color-info-main: #0071E3;
-$color-warning-main: #F44336;
+$color-info-main: #F7CF4C;
+$color-error-main: #FE3233;
+$color-calendar-main: #FF4C4C;
 
 $color-background-default: #0D1117;
 $color-background-paper: #161B22;
@@ -12,15 +13,19 @@ $color-text-primary: #E6EDF3;
 $color-text-secondary: #0D1117;
 $color-text-disabled: #EBEBE4;
 
-$color-common-white: #FBFBFD;
+$color-common-white: #fbfbfd;
 $color-common-black: #0D1117;
+
+$color-frosted-main: hsl(240 3% 26%/35%);
+$color-frosted-light: hsl(240 3% 26%/50%);
  
 :export {
   colorPrimaryMain: $color-primary-main;
   colorSecondaryMain: $color-secondary-main;
   colorSuccessMain: $color-success-main;
   colorInfoMain: $color-info-main;
-  colorWarningMain: $color-warning-main;
+  colorErrorMain: $color-error-main;
+  colorCalendarMain: $color-calendar-main;
   colorBackgroundDefault: $color-background-default;
   colorBackgroundPaper: $color-background-paper;
   colorTextPrimary: $color-text-primary;
@@ -28,4 +33,6 @@ $color-common-black: #0D1117;
   colorTextDisabled: $color-text-disabled;
   colorCommonWhite: $color-common-white;
   colorCommonBlack: $color-common-black;
+  colorFrostedMain: $color-frosted-main;
+  colorFrostedLight: $color-frosted-light;
 }

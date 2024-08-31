@@ -1,0 +1,18 @@
+$border-radius-xs: 4px;
+$border-radius-sm: 6px;
+$border-radius-md: 12px;
+$border-radius-lg: 22px;
+
+$border-radius-default: $border-radius-lg;
+
+@function borderRadius($parent, $gap) {
+  @return calc($parent - $gap);
+}
+
+:export {    
+    borderRadiusXs: $border-radius-xs;
+    borderRadiusSm: $border-radius-sm;
+    borderRadiusMd: $border-radius-md;
+    borderRadiusLg: $border-radius-lg;
+    borderRadiusDefault: $border-radius-default;
+}
